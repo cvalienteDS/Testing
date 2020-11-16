@@ -6,7 +6,7 @@
 2. Resuelve el problema.
 3. Crea unas instrucciones con todo lo necesario para que el proyecto funcione.
 4. Haz una PR con el código y todo lo que consideres necesario.
-5. Avisanos cuando hayas terminado.
+5. Avísanos cuando hayas terminado.
 
 ### ¿Qué será valorado?
 Se valorará cómo se encara con código un problema de ingeniería de datos. La estructura del código y el testing del mismo.  
