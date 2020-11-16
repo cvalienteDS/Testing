@@ -1,4 +1,4 @@
-#Prueba técnica Data Engineering
+##Prueba técnica Data Engineering
 
 ## Instrucciones
 
@@ -16,7 +16,7 @@ Se valorará cómo se encara con código un problema de ingeniería de datos. La
 - Usa las librerías que creas necesarias.
 - Tests unitarios.
 
-###La tarea
+### La tarea
 Nuestro cliente necesita recibir en un endpoint información sobre las visitas a las páginas de sus productos. 
 El json con la información tendrá los siguientes campos: 
 
@@ -28,14 +28,14 @@ El json con la información tendrá los siguientes campos:
 
 La información recibida por este endpoint debe ser guardada en local de forma persistente y acumulativa, es decir, cada vez que la aplicación se ejecute añadirá información a un fichero.
 
-####Importante!
+#### Importante!
 - El problema es pequeño en concepto, pero tiene que estar preparado para trabajar con una gran cantidad de datos.
 - 
 
-####Además...
+#### Además...
 - Queremos calcular de un mes a otro cuanto ha variado el tráfico por producto (durante un año, por ejemplo).
 - Queremos calcular la media de venta mensual de todo un año.
 - Queremos obtener todas las compras de un usuario.
 
-####Puntos extra
+#### Puntos extra
 - ¿Existe una relación entre las variables y si el usuario termina comprando? Propón una forma de encontrar la relación entre ellas.
