@@ -1,4 +1,4 @@
-##Prueba técnica Data Engineering
+# Prueba técnica Data Engineering
 
 ## Instrucciones
 
@@ -30,7 +30,6 @@ La información recibida por este endpoint debe ser guardada en local de forma p
 
 #### Importante!
 - El problema es pequeño en concepto, pero tiene que estar preparado para trabajar con una gran cantidad de datos.
-- 
 
 #### Además...
 - Queremos calcular de un mes a otro cuanto ha variado el tráfico por producto (durante un año, por ejemplo).
