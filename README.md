@@ -27,14 +27,12 @@ El json con la información tendrá los siguientes campos:
 - purchased (boolean)
 
 La información recibida por este endpoint debe ser guardada en local de forma persistente y acumulativa, es decir, cada vez que la aplicación se ejecute añadirá información a un fichero.
+Queremos que la aplicación permita consultar todas las compras de un usuario.
 
 #### Importante!
 - El problema es pequeño en concepto, pero tiene que estar preparado para trabajar con una gran cantidad de datos.
 
-#### Además...
+#### Puntos extra
 - Queremos calcular de un mes a otro cuanto ha variado el tráfico por producto (durante un año, por ejemplo).
 - Queremos calcular la media de venta mensual de todo un año.
-- Queremos obtener todas las compras de un usuario.
-
-#### Puntos extra
 - ¿Existe una relación entre las variables y si el usuario termina comprando? Propón una forma de encontrar la relación entre ellas.
