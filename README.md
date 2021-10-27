@@ -2,10 +2,10 @@
 
 ## Instrucciones
 
-1. Haz un fork del repo.
+1. Clona el repo.
 2. Resuelve el problema.
 3. Crea unas instrucciones con todo lo necesario para que el proyecto funcione.
-4. Haz una PR con el código y todo lo que consideres necesario.
+4. Crea una rama con el nombre "feature/<TU_NOMBRE_Y_APELLIDO>" y sube el código con todo lo que consideres necesario.
 5. Avísanos cuando hayas terminado.
 
 ### ¿Qué será valorado?
