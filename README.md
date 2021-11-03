@@ -1,38 +1,21 @@
-# Prueba técnica Data Engineering
+# TCK Data Engineering Challenge: código 
 
-## Instrucciones
-
+## Instrucciones 
 1. Clona el repo.
-2. Resuelve el problema.
-3. Crea unas instrucciones con todo lo necesario para que el proyecto funcione.
-4. Crea una rama con el nombre "feature/<TU_NOMBRE_Y_APELLIDO>" y sube el código con todo lo que consideres necesario.
-5. Avísanos cuando hayas terminado.
+2. Resuelve el problema en una rama feature/<nombre_candidato>.
+3. Crea unas instrucciones con todo lo necesario para que el proyecto funcione. 4. Haz una push de la rama con el código y todo lo que consideres necesario. 
+5. Avísanos cuando hayas terminado. 
+## La tarea 
+Nuestro cliente necesita extraer, transformar y guardar una serie de datos sobre las visitas a las páginas de sus productos.  
+El origen de esta información se encuentra en una base de datos SQLite (data.db).
+Se piden tres funciones:
+Queremos, dado un usuario, obtener la media de todas sus compras.
+Queremos calcular la media de venta mensual de todo un año.
+Queremos calcular la media de ventas realizadas por cada producto.
 
-### ¿Qué será valorado?
-Se valorará cómo se encara con código un problema de ingeniería de datos. La estructura del código y el testing del mismo.  
+La información extraída debe ser guardada en local de forma persistente.
 
-### Requisitos tecnológicos
-- Elige el lenguaje de programación con el que más cómodo te sientas
-- Usa las librerías que creas necesarias.
-- Tests unitarios.
+## ¿Qué será valorado?
 
-### La tarea
-Nuestro cliente necesita recibir en un endpoint información sobre las visitas a las páginas de sus productos. 
-El json con la información tendrá los siguientes campos: 
-
-- user_id
-- date
-- product_name
-- price
-- purchased (boolean)
-
-La información recibida por este endpoint debe ser guardada en local de forma persistente y acumulativa, es decir, cada vez que la aplicación se ejecute añadirá información a un fichero.
-Queremos que la aplicación permita consultar todas las compras de un usuario.
-
-#### Importante!
-- El problema es pequeño en concepto, pero tiene que estar preparado para trabajar con una gran cantidad de datos.
-
-#### Puntos extra
-- Queremos calcular de un mes a otro cuanto ha variado el tráfico por producto (durante un año, por ejemplo).
-- Queremos calcular la media de venta mensual de todo un año.
-- ¿Existe una relación entre las variables y si el usuario termina comprando? Propón una forma de encontrar la relación entre ellas.
+Se valorará cómo se encara con código un problema de ingeniería de datos. La estructura y limpieza del código y el testing del mismo.
+Además, el código deberá funcionar en la demo.
