@@ -24,7 +24,7 @@ La aplicación puede ejecutarse desde un IDE como Pycharm o directamente desde e
 
 python main.py
 
-Todos los parámetros se definen en los ficheros externos de configuración. En caso de que el ejecutable de python no esté en el path de la máquina desde la que se ejecuta el código, habrá que sustituir "python" (en la instrucción mencionada) por la ruta en la que esté el ejecutable de python.
+Todos los parámetros se definen en los ficheros externos de configuración (Utils/config.yml). En caso de que el ejecutable de python no esté en el path de la máquina desde la que se ejecuta el código, habrá que sustituir "python" (en la instrucción mencionada) por la ruta en la que esté el ejecutable de python.
 
 Para ejecutar los tests hay que ejecutar la instrucción:
 
