@@ -8,11 +8,17 @@ logger = logging.getLogger(__name__)
 
 class DB:
     def __init__(self,
-                 path):
-        self.path = path
-        self.cur = self.db_connect()
+                 path=None):
+
+        if path:
+            self.path = path
+            self.cur = self.db_connect()
+        else:
+            self.con = sqlite3.connect(':memory:')
+            self.cur = self.con.cursor()
 
     def db_connect(self):
+        logger.info("Connecting DB '{}'".format(self.path))
         if os.path.isfile(self.path):
             con = sqlite3.connect(self.path)
             cur = con.cursor()

@@ -1,10 +1,13 @@
 import os
+import logging
+
+logger = logging.getLogger(__name__)
 
 def format_output(results):
     manylines = ''
     if isinstance(results[2], list):
         for tup in results[2]:
-            manylines += f'{tup[0]} mean prince is {tup[1]:.2f}\n'
+            manylines += f'     {tup[0]} mean prince is {tup[1]:.2f}\n'
 
     formatted_output = ''
     if results[0]:
@@ -21,12 +24,14 @@ def format_output(results):
     return formatted_output
 
 def remove_prev_output(fname):
+    logger.info("Removing previous output '{}'".format(fname))
     try:
         os.remove(fname)
     except OSError:
         pass
 
 def write_output(fname, content):
+    logger.info("Writing to disk '{}'".format(fname))
     with open(fname, "w") as f:
         f.write(content)
 

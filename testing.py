@@ -1,40 +1,43 @@
 import unittest
 import db_module
-import sqlite3
 
 class MyTestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        print('setupClass')
-        conn = sqlite3.connect(':memory:')
+        print('Setting up environment for testing: Creating and populating sqlite test database')
+        cls.test_db_instance = db_module.DB()   # creates an in memory sqlite database
 
-        cls.c = conn.cursor()
+        cls.cur = cls.test_db_instance.cur
 
-        sql_file = open("data.db.sql")
-        sql_as_string = sql_file.read()
-        cls.c.executescript(sql_as_string)
-
-        # c.execute("""CREATE TABLE products (product_id text primary key, name text)""")
-        # c.execute("""CREATE TABLE visits (user_id INTEGER, YearMonthDay TEXT, product_id TEXT, price text, purchased text)""")
-        # with conn:
-        #     c.execute("INSERT INTO employees VALUES (:first, :last, :pay)", {'first': emp.first, 'last': emp.last, 'pay': emp.pay})
+        with open("data.db.sql") as sql_file:
+            sql_as_string = sql_file.read()
+            cls.cur.executescript(sql_as_string)  # executes external script to populate test database
 
     @classmethod
     def tearDownClass(cls):
-        print('teardownClass')
-        cls.c.close()
+        print('Closing sqlite test database connection')
+        cls.test_db_instance.con.close()
 
     def test_mean_bought_given_user(self):
-        self.assertEqual(db_module.DB.mean_bought_given_user('U90'), 41.245625)
-        self.assertIsInstance(db_module.DB.mean_bought_given_user('U90'), float)
+        actual = self.test_db_instance.mean_bought_given_user(user='U90')
+        expected = 41.245625
+        with self.subTest():
+            self.assertEqual(actual, expected)
+            self.assertIsInstance(self.test_db_instance.mean_bought_given_user(user='U90'), float, f'Actual output is not an instance of {float}')
 
     def test_sales_mean_by_month_given_year(self):
-        self.assertEqual(db_module.DB.sales_mean_by_month_given_year('2021'), 48.100087197811526)
-        self.assertIsInstance(db_module.DB.sales_mean_by_month_given_year('2021'), float)
+        with self.subTest():
+            actual = self.test_db_instance.sales_mean_by_month_given_year('2021')
+            expected = 48.100087197811526
+            self.assertEqual(actual, expected)
+            self.assertIsInstance(actual, float, f'Actual output is not an instance of {float}')
 
     def test_sales_mean_by_product(self):
-        self.assertEqual(db_module.DB.sales_mean_by_product(), [('Bolso', 25.019287128712886), ('Perfume', 45.03208015267181), ('Gafas', 77.02116883116881)])
-        self.assertIsInstance(db_module.DB.sales_mean_by_product(), list)
+        with self.subTest():
+            actual = self.test_db_instance.sales_mean_by_product()
+            expected = [('Bolso', 25.019287128712886), ('Perfume', 45.03208015267181), ('Gafas', 77.02116883116881)]
+            self.assertEqual(actual, expected)
+            self.assertIsInstance(actual, list, f'Actual output is not an instance of {list}')
 
 
 if __name__ == '__main__':

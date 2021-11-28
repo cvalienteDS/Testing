@@ -6,6 +6,7 @@ import os
 logger = logging.getLogger(__name__)
 
 def read_yaml_config(config_name):
+    logger.info("Reading config '{}'".format(config_name))
     path = config_name
     try:
         with open(path, 'r') as stream:
