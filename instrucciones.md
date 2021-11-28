@@ -16,11 +16,15 @@ pip install -r requirements.txt
 
 2.	Ejecución de la aplicación
 
+Clonar el código mediante la instrucción:
+
+git clone -b karlosvaliente git@bitbucket.org:the-cocktail/data_engineering_test.git
+
 La aplicación puede ejecutarse desde un IDE como Pycharm o directamente desde el símbolo de sistema, situando el directorio de trabajo actual sobre la ruta en la que se encuentra el fichero “main.py”, y ejecutando la instrucción:
 
 python main.py
 
-Todos los parámetros se definen en los ficheros externos de configuración.
+Todos los parámetros se definen en los ficheros externos de configuración. En caso de que el ejecutable de python no esté en el path de la máquina desde la que se ejecuta el código, habrá que sustituir "python" (en la instrucción mencionada) por la ruta en la que esté el ejecutable de python.
 
 Para ejecutar los tests hay que ejecutar la instrucción:
 
