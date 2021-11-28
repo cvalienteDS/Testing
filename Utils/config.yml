@@ -1,0 +1,13 @@
+db:
+  path: data.db
+
+queries:
+  mean_bought_given_user:
+    parameters:
+      user: 'U90'
+  sales_mean_by_month_given_year:
+    parameters:
+      year: '2021'
+
+output:
+  filename: output.txt
