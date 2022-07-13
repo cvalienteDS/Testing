@@ -1,5 +1,6 @@
 import unittest
-import db_module
+from db import db_module
+
 
 class MyTestCase(unittest.TestCase):
     @classmethod

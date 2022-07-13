@@ -1,5 +1,5 @@
 import os
-from db_module import DB
+from db.db_module import DB
 from Utils.read_config import read_yaml_config
 from Utils.setup_logging import setup_logging
 from aux_functions import format_output, remove_prev_output, write_output
