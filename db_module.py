@@ -7,14 +7,13 @@ logger = logging.getLogger(__name__)
 
 
 class DB:
-    def __init__(self,
-                 path=None):
+    def __init__(self, path=None):
 
         if path:
             self.path = path
             self.cur = self.db_connect()
         else:
-            self.con = sqlite3.connect(':memory:')
+            self.con = sqlite3.connect(":memory:")
             self.cur = self.con.cursor()
 
     def db_connect(self):
@@ -23,7 +22,11 @@ class DB:
             con = sqlite3.connect(self.path)
             cur = con.cursor()
         else:
-            logger.error("Error during db connection. Filename doesnt exist: {}".format(self.path))
+            logger.error(
+                "Error during db connection. Filename doesnt exist: {}".format(
+                    self.path
+                )
+            )
             sys.exit(1)
         return cur
 
@@ -39,8 +42,8 @@ class DB:
                 SELECT avg(price) AS MEAN_BOUGHT
                 FROM visits
                 WHERE purchased = 'True' and user_id = :user
-                """
-                , {"user": user}
+                """,
+                {"user": user},
             )
         except sqlite3.Error as e:
             logger.error(e)
@@ -65,8 +68,8 @@ class DB:
                 GROUP BY SUBSTR(YearMonthDay, 6, 2) 
                 )
             SELECT avg(SALES_MEAN) AS MONTHLY_MEAN FROM CTE
-                """
-                , {"year": year}
+                """,
+                {"year": year},
             )
         except sqlite3.Error as e:
             logger.error(e)
