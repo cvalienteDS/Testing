@@ -25,11 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: make install
-      - name: Lint with pylint
-        run: make lint
-      - name: Test with pytest
-        run: make test
-      - name: Format code
-        run: make format
+      #- name: Install dependencies
+      #  run: make install
+      #- name: Lint with pylint
+      #  run: make lint
+      #- name: Test with pytest
+      #  run: make test
+      #- name: Format code
+      #  run: make format
