@@ -1,4 +1,5 @@
-# testing_with_sqlite
+[![Python application test with Github Actions](https://github.com/cvalienteDS/Testing/actions/workflows/main.yml/badge.svg)](https://github.com/cvalienteDS/Testing/actions/workflows/main.yml)
+# SQLite app
 ![chart drawio](https://user-images.githubusercontent.com/65561135/178716843-042001e8-dbda-4dfa-8771-f109adf09ebf.png)
 The code connects to a SQLite DB, fetch data and get some summary queries. Then, format the output for specified use case.
 
