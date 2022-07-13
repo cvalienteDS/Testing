@@ -1,5 +1,4 @@
 import os
-import logging
 from db_module import DB
 from Utils.read_config import read_yaml_config
 from Utils.setup_logging import setup_logging
