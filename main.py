@@ -3,10 +3,9 @@ import logging
 from db_module import DB
 from Utils.read_config import read_yaml_config
 from Utils.setup_logging import setup_logging
-from aux_functions import *
+from aux_functions import format_output, remove_prev_output, write_output
 
 setup_logging(os.path.join(os.path.dirname(__file__), "Utils/logging.yaml"), Logs_path='Logs')
-logger = logging.getLogger(__name__)
 
 if __name__ == '__main__':
     cfg = read_yaml_config(r"Utils/config.yml")
